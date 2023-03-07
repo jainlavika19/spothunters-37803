@@ -1,0 +1,145 @@
+@import '../../assets/styles/sass/common/mixin';
+
+.feedback-modal {
+  .modal-content {
+    background: #ffffff;
+    box-shadow: 0px 4px 18px 10px rgba(41, 44, 79, 0.12);
+    border-radius: 16px;
+    // padding: 0px 32px;
+  }
+  .modal-header {
+    border-bottom: none;
+    justify-content: end;
+    padding-bottom: 0px;
+    .ic-close {
+      color: #87888a;
+      cursor: pointer;
+      z-index: 1;
+    }
+  }
+  .modal-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 12px;
+    letter-spacing: 0.05em;
+    color: #005ba6;
+    margin-bottom: 24px;
+  }
+  .modal-body {
+    &.provide-feedback-body {
+      margin-top: -30px;
+      text-align: center;
+
+      .thankyou-txt {
+        font-weight: 600;
+        font-size: 20px;
+        letter-spacing: 0.05em;
+        color: #005ba6;
+        margin-bottom: 14px;
+      }
+      .fb-txt {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.05em;
+        justify-content: center;
+        color: #292c31;
+        margin-bottom: 6px;
+      }
+      .fb-txt-2 {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        letter-spacing: 0.05em;
+        color: #292c31;
+      }
+    }
+    .wlcm-txt {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: 0.05em;
+      color: #292c31;
+      margin-bottom: 1.5rem;
+    }
+    .link-txt {
+      padding-left: 0px;
+      padding-right: 0px;
+      h2 {
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        color: #292c31;
+      }
+    }
+    .app-view {
+      display: flex;
+      .app-view-img {
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+    }
+  }
+  .cipla {
+    color: #005ca7;
+  }
+  .med {
+    color: #02b18e;
+  }
+}
+
+@include mq('phone', min) {
+  .feedback-modal {
+    .modal-dialog {
+      margin: 1rem;
+    }
+    .modal-body {
+      padding: 0px 15px 32px 15px;
+      &.provide-feedback-body {
+        .thankyou-txt {
+          line-height: 26px;
+        }
+      }
+      .link-txt {
+        h2 {
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+    }
+    .modal-title {
+      padding: 0px 15px;
+    }
+  }
+}
+
+@include mq('tablet', min) {
+  .feedback-modal {
+    .modal-body {
+      padding: 0px 32px 32px 32px;
+      &.provide-feedback-body {
+        padding: 24px;
+        padding-top: 0px;
+        .thankyou-txt {
+          line-height: 12px;
+        }
+      }
+      .link-txt {
+        h2 {
+          font-size: 18px;
+          line-height: 24px;
+        }
+      }
+    }
+    .modal-title {
+      padding: 0px 32px;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .feedback-modal {
+    .modal-dialog {
+      margin: 1.75rem auto;
+    }
+  }
+}
